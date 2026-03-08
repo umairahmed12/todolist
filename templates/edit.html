@@ -1,0 +1,19 @@
+{%extends "index.html" %}
+{% block edit %}
+    <form action = "/edit/{{todo.sno}}" method = "POST">
+  <div class="form-group">
+    <label for="title">Todo Title</label>
+    <input type="text" class="form-control" id="title" aria-describedby="emailHelp" name = "title">
+    
+  </div>
+  <div class="form-group">
+    <label for="Text">Text</label>
+    <input type="text" class="form-control" id="Text" name = "desc">
+  </div>
+  <div class="form-group form-check">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+    <label class="form-check-label" for="exampleCheck1">Remember me</label>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+{% endblock %}
